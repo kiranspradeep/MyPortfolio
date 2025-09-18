@@ -1,0 +1,134 @@
+.education {
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh; /* full screen height */
+  position: relative;
+}
+
+.education h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--accent-color);
+}
+
+/* Timeline container */
+.timeline.zigzag {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* Vertical connecting line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transition: height 0.5s ease-out;
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Zig-zag positions */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -10px;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+}
+
+/* Content */
+.timeline-content {
+  background-color: var(--section-bg);
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.timeline-content p, .extra-info {
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.extra-info {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover .extra-info {
+  opacity: 1;
+}
+
+/* Year labels */
+.timeline-year {
+  position: absolute;
+  top: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.timeline-item.left .timeline-year {
+  right: calc(100% + 10px);
+}
+
+.timeline-item.right .timeline-year {
+  left: calc(100% + 10px);
+}

@@ -1,0 +1,19 @@
+.about {
+  background-color: transparent;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* light */
+.app.light .about p {
+  max-width: 700px;
+  margin: auto;
+  color: #999;
+}
+
+/* dark */
+.app.dark .about p {
+  max-width: 700px;
+  margin: auto;
+  color: whitesmoke;
+}

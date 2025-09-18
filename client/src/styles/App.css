@@ -1,0 +1,86 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: transparent; /* optional, will be overridden by section/background */
+  color: inherit; /* inherit from section/app */
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode variables */
+.app.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #00bcd4;
+}
+
+/* Light mode variables */
+.app.light {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --accent-color: #00bcd4;;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+body {
+  background: transparent;
+  color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+} */

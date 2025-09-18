@@ -1,0 +1,23 @@
+.toggle-btn {
+  position: fixed;       /* Fix it relative to the viewport */
+  bottom: 20px;          /* 20px from the bottom */
+  left: 20px;            /* 20px from the left */
+  background: #1e1e1e;   /* Dark button background */
+  color: #ffffff;        /* Icon color */
+  border: none;
+  border-radius: 50%;    /* Round button */
+  width: 50px;           /* Size */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1000;         /* Make sure it's above other elements */
+}
+
+.toggle-btn:hover {
+  background: #00bcd4;   /* Accent color on hover */
+  transform: scale(1.1);
+}
